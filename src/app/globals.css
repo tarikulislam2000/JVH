@@ -1,28 +1,105 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --primary:#265DF5;
-  --btn-border:#2B4BFF;
+/* ---------- Design tokens (Tailwind v4 CSS-first config) ---------- */
+@theme {
+  /* Fonts mapped from Fontsource Variable packages */
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, SFMono-Regular, monospace;
+
+  /* Breakpoints matching design specs */
+  --breakpoint-xs: 30rem; /* 480px */
+  --breakpoint-sm: 40rem; /* 640px */
+  --breakpoint-md: 48rem; /* 768px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-2xl: 96rem; /* 1536px */
+
+  /* Figma Brand Colors */
+  --color-primary: #265df5;
+  --color-btn-border: #2b4bff;
+
+  --color-brand-50: #eef1ff;
+  --color-brand-100: #dfe4ff;
+  --color-brand-200: #c5ceff;
+  --color-brand-300: #9fadff;
+  --color-brand-400: #7585ff;
+  --color-brand-500: #4f63ff;
+  --color-brand-600: #265df5;
+  --color-brand-700: #2038e0;
+  --color-brand-800: #1d2fb5;
+  --color-brand-900: #1d2d8f;
+  --color-brand-950: #131b57;
+
+  /* Semantic Aliases */
+  --color-brand: var(--color-brand-600);
+  --color-brand-50: var(--color-brand-50);
+  --color-brand-100: var(--color-brand-100);
+  --color-brand-dark: var(--color-brand-700);
+  --color-brand-soft: var(--color-brand-50);
+  --color-ink: #0f1222;
+  --color-success: #047857;
+
+  /* Layout Container Max-Width */
+  --container-page: 82.5rem; /* 1320px */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---------- Base Styles ---------- */
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  body {
+    @apply min-h-dvh bg-white font-sans text-ink antialiased overflow-x-hidden;
+  }
+  img,
+  video,
+  svg {
+    @apply max-w-full;
+  }
+  button,
+  [role="button"],
+  summary {
+    @apply cursor-pointer;
+  }
+  button:disabled {
+    @apply cursor-not-allowed;
+  }
+  ::selection {
+    @apply bg-brand-600 text-white;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-500;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ---------- Custom Utilities (Tailwind v4 syntax) ---------- */
+@utility frame {
+  @apply mx-auto w-full max-w-page border-x border-ink/10;
+}
+@utility gutter {
+  @apply px-4 sm:px-6 lg:px-10;
+}
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+@utility mono-label {
+  @apply font-mono text-[10px] tracking-wider uppercase;
 }
