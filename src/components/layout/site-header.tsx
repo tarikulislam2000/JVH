@@ -22,7 +22,13 @@ export function SiteHeader() {
           >
             Login
           </Link>
-          <Link href={ROUTES.register} className={buttonVariants({ size: "sm" })}>
+          <Link
+            href={ROUTES.register}
+            className={buttonVariants({
+              size: "sm",
+              className: "bg-[#265DF5]",
+            })}
+          >
             Get Started
           </Link>
           <MobileNav />

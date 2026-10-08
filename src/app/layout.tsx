@@ -3,6 +3,10 @@ import "@fontsource-variable/geist";
 import "@fontsource-variable/geist-mono";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -32,7 +36,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB">
+    <html lang="en-GB" className={cn("font-sans", geist.variable)}>
       <body id="top" suppressHydrationWarning>
         <a
           href="#main"

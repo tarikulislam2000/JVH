@@ -24,7 +24,7 @@ export function Hero() {
         <h1 className="max-w-3xl text-4xl leading-[1.05] font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           Simplify Your UK Sponsorship From Job Search
         </h1>
-        <p className="mt-5 max-w-md text-xs text-white/85 sm:text-sm">
+        <p className="mt-5 mb-[32px] max-w-2xl text-xs text-white/85 sm:text-sm">
           Spend less time searching and more time applying to the right opportunities, all in one
           place.
         </p>
