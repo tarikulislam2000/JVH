@@ -14,6 +14,7 @@
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
   }
+  
   /* Breakpoints matching design specs */
   --breakpoint-xs: 30rem; /* 480px */
   --breakpoint-sm: 40rem; /* 640px */
