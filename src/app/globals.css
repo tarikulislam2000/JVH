@@ -1,7 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-
+*{
+  text:16px;
+}
 @custom-variant dark (&:is(.dark *));
 
 /* ---------- Design tokens (Tailwind v4 CSS-first config) ---------- */

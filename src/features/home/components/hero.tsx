@@ -69,7 +69,7 @@ function AnimatedTitle({ text }: { text: string }) {
       animate="show"
       exit="exit"
       aria-label={text}
-      className="max-w-7xl text-4xl leading-[1.05] font-semibold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl"
+      className="max-w-3xl text-3[rem] leading-[1.05] font-semibold tracking-tight sm:text-[3.75rem] md:text-[4.25rem] lg:text-[4.75rem]"
     >
       {text.split(" ").map((word, wi) => (
         <span key={wi} aria-hidden className="inline-block whitespace-nowrap">
