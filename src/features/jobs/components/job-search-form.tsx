@@ -14,7 +14,7 @@ export function JobSearchForm({ q = "", location = "" }: { q?: string; location?
         defaultValue={q}
         aria-label="Search jobs"
         placeholder="Search job title, company, or skills..."
-        className="min-w-0 flex-1 px-3 py-3 text-xs outline-none focus:ring-2 focus:ring-brand/40 focus:ring-inset"
+        className="min-w-0 flex-1 px-[1.12rem] rounded-md py-[1rem] text-xs outline-none focus:ring-2 focus:ring-brand/40 focus:ring-inset"
       />
       <select
         name="location"
@@ -22,6 +22,7 @@ export function JobSearchForm({ q = "", location = "" }: { q?: string; location?
         aria-label="Location"
         className="border-t border-ink/15 bg-white px-3 py-3 text-xs text-ink/70 sm:w-40 sm:border-t-0 sm:border-l"
       >
+
         <option value="">Select Location</option>
         {UK_LOCATIONS.map((l) => (
           <option key={l}>{l}</option>

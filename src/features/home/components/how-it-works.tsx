@@ -17,7 +17,7 @@ export function HowItWorks() {
   return (
     <section className="gutter pb-12">
       <h2 className="text-[2.75rem] font-semibold tracking-tight">How It Works</h2>
-      <div className="mt-8 grid border border-ink/10 bg-[#F6F8FF] md:grid-cols-3">
+      <div className="mt-8 grid border border-ink/10 bg-[#F6F8FF] rounded-sm md:grid-cols-3">
         {steps.map(([t, d], i) => (
           <div
             key={t}
@@ -31,6 +31,7 @@ export function HowItWorks() {
           </div>
         ))}
       </div>
+      
     </section>
   );
 }
