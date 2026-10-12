@@ -2,16 +2,71 @@ import type { Route } from "next";
 import { LEGAL_PAGES, ROUTES, legalRoute, type LegalSlug } from "./routes";
 import { siteConfig } from "./site";
 
+export interface SubNavItem {
+  title: string;
+  description: string;
+  href: Route;
+  badge?: string;
+  iconType: "heart" | "chart" | "edit" | "target";
+}
+
+export interface NavSection {
+  header?: string;
+  items: SubNavItem[];
+}
+
 export interface NavItem {
   label: string;
-  href: Route;
+  href?: Route;
+  children?: NavSection[];
 }
 
 export const mainNav: NavItem[] = [
   { label: "Home", href: ROUTES.home },
   { label: "About Us", href: ROUTES.about },
   { label: "Jobs", href: ROUTES.jobs },
-  { label: "Get Hired Faster", href: ROUTES.buildCv },
+  {
+    label: "Get Hired Faster",
+    children: [
+      {
+        header: "NHS SUPPORT",
+        items: [
+          {
+            title: "NHS Statement",
+            description: "Create a winning NHS supporting statement",
+            href: ROUTES.nhsStatement,
+            iconType: "heart",
+          },
+        ],
+      },
+      {
+        header: "CV SUPPORT",
+        items: [
+          {
+            title: "CV Score Checker",
+            description: "Find out how strong your CV really is",
+            href: ROUTES.cvChecker,
+            badge: "BETA",
+            iconType: "chart",
+          },
+          {
+            title: "Revamp My CV",
+            description: "Transform your CV from basic to interview-ready",
+            href: ROUTES.buildCv,
+            badge: "BETA",
+            iconType: "edit",
+          },
+          {
+            title: "Tailor CV for Job",
+            description: "Match your CV to a job description",
+            href: ROUTES.tailorCv,
+            badge: "BETA",
+            iconType: "target",
+          },
+        ],
+      },
+    ],
+  },
   { label: "Pricing", href: ROUTES.pricing },
   { label: "Blog", href: ROUTES.blog },
   { label: "Contact", href: ROUTES.contact },
@@ -34,7 +89,7 @@ export const footerNav = {
     label: LEGAL_PAGES[slug],
     href: legalRoute(slug),
   })),
-} satisfies Record<string, NavItem[]>;
+} satisfies Record<string, { label: string; href: Route }[]>;
 
 export const socialLinks = [
   { label: "TikTok", href: siteConfig.social.tiktok },

@@ -13,9 +13,10 @@ export const ROUTES = {
   contact: "/contact",
   buildCv: "/build-cv",
   nhsStatement: "/nhs-statement",
+  cvChecker: "/cv-checker",
+  tailorCv: "/tailor-cv",
   login: "/login",
   register: "/register",
-  // dashboard: "/dashboard",
 } as const satisfies Record<string, Route>;
 
 export const jobRoute = (slug: string) => `/jobs/${slug}` as Route;
@@ -28,6 +29,3 @@ export const LEGAL_PAGES = {
   disclaimer: "Disclaimer",
 } as const;
 export type LegalSlug = keyof typeof LEGAL_PAGES;
-
-/** Paths that require a signed-in user (enforced in src/proxy.ts). */
-// export const PROTECTED_PREFIXES = [ROUTES.dashboard] as const;

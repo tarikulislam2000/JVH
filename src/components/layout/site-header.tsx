@@ -4,7 +4,7 @@ import { Logo } from "./logo";
 import { MainNav } from "./main-nav";
 import { MobileNav } from "./mobile-nav";
 import { buttonVariants } from "../ui/button";
-
+//site-header.tsx
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-white">

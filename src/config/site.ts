@@ -1,3 +1,5 @@
+// site.ts
+
 import { env } from "@/lib/env";
 import logo from "../../public/globe.svg"
 export const siteConfig = {

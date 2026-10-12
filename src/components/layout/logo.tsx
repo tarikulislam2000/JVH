@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 import { ROUTES } from "@/config/routes";
 import { cn } from "@/lib/cn";
 import Image from "next/image";
-
+//logo.tsx
 export function Logo({ light = false, className }: { light?: boolean; className?: string }) {
   return (
     <Link
