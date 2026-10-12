@@ -209,7 +209,7 @@ export function Hero() {
             }`}
           >
             <span className="text-3xl font-medium sm:text-4xl lg:text-5xl">{n}</span>
-            <span className="font-mono text-[10px] tracking-wider uppercase sm:text-xs">{l}</span>
+            <span className="font-mono text-[11px] tracking-wider uppercase sm:text-xs">{l}</span>
           </div>
         ))}
       </div>
