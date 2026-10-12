@@ -23,7 +23,7 @@ export function HowItWorks() {
             key={t}
             className={`flex flex-col justify-between   ${i ? "border-t border-ink/10 md:border-t-0 md:border-l" : ""}`}
           >
-            <span className="text-5xl font-light text-brand sm:text-6xl border-b p-[2rem]">0{i + 1}</span>
+            <span className="text-[5.25rem] font-light text-brand border-b p-[2rem]">0{i + 1}</span>
             <div className="p-[2rem]">
               <h3 className="text-[1.2rem] font-semibold">{t}</h3>
               <p className="mt-2  text-ink/70">{d}</p>
