@@ -4,15 +4,16 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "cn"
 
 const buttonVariants = cva(
-  "group/button inline-flex shrink-0 items-center justify-center rounded-xs border border-transparent text-sm font-medium whitespace-nowrap transition-colors outline-none select-none focus-visible:ring-2 focus-visible:ring-brand-500/40 focus-visible:ring-offset-1 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+  "group/button inline-flex shrink-0 items-center justify-center  border rounded-[4px] text-sm font-medium whitespace-nowrap transition-colors outline-none select-none focus-visible:ring-2 focus-visible:ring-brand-500/40 focus-visible:ring-offset-1 active:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       variant: {
         // "Get Started", "Search Jobs", "View details", "Subscribe"
-        default:
-          "border-btn-border bg-brand-600 text-white hover:bg-brand-700 hover:border-brand-700",
-        // "Login", "Show More", "Read More", "Filter"
+        default:" text-white font-semibold bg-[#265DF5] hover:bg-[#265DF5]/80  tex-sm px-4 py-3",
         outline:
+          " border[1px] border-[#E4E0D6] text-[#000] font-semibold bg-[#fff] hover:bg-[#265DF5]/80 hover:text-white tex-sm px-4 py-3",
+        // "Login", "Show More", "Read More", "Filter"
+        pdefault:
           "border-ink/15 bg-white text-ink hover:bg-brand-50 hover:border-brand-300 aria-expanded:bg-brand-50",
         // Soft blue tint (cards, tags, secondary actions)
         secondary:

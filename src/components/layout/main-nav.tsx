@@ -11,13 +11,13 @@ export const isActive = (pathname: string, href: string) =>
 export function   MainNav() {
   const pathname = usePathname();
   return (
-    <nav aria-label="Main" className="hidden items-center gap-6 text-xs lg:flex">
+    <nav aria-label="Main" className="hidden items-center gap-1 text-[0.84375rem] lg:flex">
       {mainNav.map(({ label, href }) => (
         <Link
           key={label}
           href={href}
           aria-current={isActive(pathname, href) ? "page" : undefined}
-          className={cn("hover:text-brand", isActive(pathname, href) && "font-semibold text-brand")}
+          className={cn("hover:text-brand px-3", isActive(pathname, href) && "font-semibold text-brand")}
         >
           {label}
         </Link>

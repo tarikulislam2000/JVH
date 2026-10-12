@@ -18,9 +18,10 @@ export function JobCard({ job }: { job: Job }) {
   const sponsorship =
     job.sponsorship === "likely" ? "Sponsorship likely available" : "Sponsorship available";
   return (
-    <article className="flex flex-col border border-ink/15 bg-white p-3">
-      <div className="flex flex-wrap gap-1.5">
-        <span className="rounded-xs border border-brand px-1.5 py-0.5 font-mono text-[8px] text-brand uppercase">
+    <article className="flex flex-col border border-ink/15 bg-white p-3 rounded-md hover:shadow-xl transition duration-150 ease-in-out
+">
+      <div className="flex flex-wrap gap-1.5 justify-end">
+        <span className={`rounded-xs border border-brand px-1.5 py-0.5 font-mono text-[8px] text-brand uppercase ${job.sponsorship ==="likely"? "":"bg-[#4375FF] text-white"}`}>
           {sponsorship}
         </span>
         <span className="rounded-xs bg-success px-1.5 py-0.5 font-mono text-[8px] text-white uppercase">
@@ -36,7 +37,7 @@ export function JobCard({ job }: { job: Job }) {
           <p className="truncate text-[10px] text-ink/60">{job.employer.name}</p>
         </div>
       </div>
-      <dl className="mt-3 grid grid-cols-2 border border-ink/10 *:border-ink/10 [&>*:nth-child(n+3)]:border-t [&>*:nth-child(odd)]:border-r">
+      <dl className="mt-3 grid grid-cols-2 rounded-md border border-ink/10 *:border-ink/10 [&>*:nth-child(n+3)]:border-t [&>*:nth-child(odd)]:border-r">
         <Cell
           label="Salary"
           value={formatSalaryRange(job.salary.min, job.salary.max, job.salary.period)}

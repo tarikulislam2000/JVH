@@ -14,7 +14,7 @@ export function Logo({ light = false, className }: { light?: boolean; className?
   <Image
       src="/jvh-logo.svg"
       width={153}
-      height={200}
+      height={34}
       alt="Picture of the author"
     />    </Link>
   );

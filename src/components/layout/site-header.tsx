@@ -8,7 +8,7 @@ import { buttonVariants } from "../ui/button";
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-ink/10 bg-white">
-      <div className="mx-auto flex h-14 w-full max-w-page items-center justify-between gutter">
+      <div className="mx-auto flex h-16 w-full max-w-page items-center justify-between gutter">
         <Logo className="text-xl" />
         <MainNav />
         <div className="flex items-center gap-2">
@@ -17,7 +17,7 @@ export function SiteHeader() {
             className={buttonVariants({
               variant: "outline",
               size: "sm",
-              className: "hidden sm:inline-flex",
+              // className: "hidden sm:inline-flex",
             })}
           >
             Login
@@ -25,8 +25,9 @@ export function SiteHeader() {
           <Link
             href={ROUTES.register}
             className={buttonVariants({
+              variant:"default",
               size: "sm",
-              className: "bg-[#265DF5]",
+              // className: "bg-[#265DF5]",
             })}
           >
             Get Started
