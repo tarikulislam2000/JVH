@@ -38,12 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-GB" className={cn("font-sans", geist.variable)}>
       <body id="top" suppressHydrationWarning>
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:rounded-sm focus:bg-white focus:px-3 focus:py-2 focus:text-sm"
-        >
-          Skip to content
-        </a>
+       
         {children}
       </body>
     </html>
