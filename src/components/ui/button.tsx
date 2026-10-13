@@ -11,7 +11,7 @@ const buttonVariants = cva(
         // "Get Started", "Search Jobs", "View details", "Subscribe"
         default:" text-white font-semibold bg-[#265DF5] hover:bg-[#265DF5]/80  tex-sm px-4 py-3",
         outline:
-          " border[1px] border-[#E4E0D6] text-[#000] font-semibold bg-[#fff] hover:bg-[#265DF5]/80 hover:text-white tex-sm px-4 py-3",
+          " border-[1px] border-[#E4E0D6] text-[#000] font-semibold bg-[#fff] hover:bg-[#265DF5]/80 hover:text-white text-sm px-4 py-3",
         // "Login", "Show More", "Read More", "Filter"
         pdefault:
           "border-ink/15 bg-white text-ink hover:bg-brand-50 hover:border-brand-300 aria-expanded:bg-brand-50",

@@ -43,8 +43,14 @@ export async function RecentJobs() {
       <div className="mt-6">
         <JobGrid jobs={jobs} />
       </div>
-      <div className="mt-6 text-center">
-        <Link href={ROUTES.jobs} className={buttonVariants({ variant: "outline" })}>
+ <div className="mt-6 text-center">
+        <Link
+          href={ROUTES.jobs}
+          className={buttonVariants({
+            variant: "outline",
+            className: "px-6 py-3",
+          })}
+        >
           Show More
         </Link>
       </div>
