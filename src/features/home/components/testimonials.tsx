@@ -21,11 +21,11 @@ export function Testimonials() {
         {[0, 1, 2, 3].map((i) => (
           <figure
             key={i}
-            className="flex w-[82%] shrink-0 snap-start flex-col justify-between border border-ink/15 p-5 sm:w-[46%] lg:w-auto"
+            className="flex w-[82%] shrink-0 snap-start flex-col rounded justify-between border border-ink/15 p-5 sm:w-[46%] lg:w-auto"
           >
             <div>
-              <span className="text-4xl leading-none font-bold text-brand">“</span>
-              <blockquote className="mt-2 text-xs leading-relaxed text-ink/80">{quote}</blockquote>
+              <span className="text-[6rem] leading-none text-brand absolute">“</span>
+              <blockquote className=" mt-10 text-justify text-xs leading-relaxed text-ink/80">{quote}</blockquote>
             </div>
             <figcaption className="mt-6 border-t border-ink/10 pt-4">
               <div className="flex items-center gap-3">
